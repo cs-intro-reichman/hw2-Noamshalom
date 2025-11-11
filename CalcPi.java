@@ -5,12 +5,12 @@ public class CalcPi {
             return;
         }
 
-        int n = Integer.parseInt(args[0]); // מספר האיברים בסכום
+        int n = Integer.parseInt(args[0]);
         double sum = 0.0;
-        double sign = 1.0;   // +, -, +, -, ...
-        int denom = 1;       // 1, 3, 5, 7, ...
+        double sign = 1.0;
+        int denom = 1;
 
-        for (int k = 0; k < n; k++) {
+        for (int i = 0; i < n; i++) {
             sum += sign / denom;
             sign = -sign;
             denom += 2;
@@ -18,8 +18,7 @@ public class CalcPi {
 
         double approx = 4.0 * sum;
 
-        // פלט מדויק: 15 ספרות אחרי הנקודה + ריווח כדי ליישר לעמודה
-        System.out.printf(java.util.Locale.US, "pi according to Java: %.15f%n", Math.PI);
-        System.out.printf(java.util.Locale.US, "pi, approximated:   %.15f%n", approx);
+        System.out.println("pi according to Java: " + Math.PI);
+        System.out.println("pi, approximated: " + approx);
     }
 }
