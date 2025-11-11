@@ -7,9 +7,11 @@ public class Cheers {
         for (int i = 0; i < word.length(); i++) {
             char ch = word.charAt(i);
             if (usesAn(ch)) {
+                // "an" + רווח אחד
                 System.out.println("Give me an " + ch + ": " + ch + "!");
             } else {
-                System.out.println("Give me a "  + ch + ": " + ch + "!");
+                // "a" + שני רווחים (ליישור עם "an ")
+                System.out.println("Give me a  " + ch + ": " + ch + "!");
             }
         }
 
@@ -19,7 +21,7 @@ public class Cheers {
         }
     }
 
-    // Letters that take "an" per the assignment: A,E,F,H,I,L,M,N,O,R,S,X
+    // האותיות שמקבלות "an" לפי ההנחיה
     private static boolean usesAn(char c) {
         return "AEFHILMNORSX".indexOf(c) >= 0;
     }
