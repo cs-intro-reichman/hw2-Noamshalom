@@ -1,24 +1,18 @@
 public class CalcPi {
     public static void main(String[] args) {
-        if (args.length != 1) {
-            System.out.println("Usage: java CalcPi <n>");
-            return;
-        }
-
         int n = Integer.parseInt(args[0]);
+
         double sum = 0.0;
-        double sign = 1.0;
-        int denom = 1;
-
-        for (int i = 0; i < n; i++) {
-            sum += sign / denom;
-            sign = -sign;
-            denom += 2;
+        for (int k = 0; k < n; k++) {
+            double term = 1.0 / (2 * k + 1);
+            if ((k & 1) == 1) sum -= term;   // שלילי באיברים הזוגיים-לוגית (1,3,5..)
+            else               sum += term;   // חיובי באיברים האי-זוגיים
         }
-
         double approx = 4.0 * sum;
 
-        System.out.println("pi according to Java: " + Math.PI);
-        System.out.println("pi, approximated: " + approx);
+       
+        System.out.print("pi according to Java: " + Math.PI + "\n");
+        System.out.print("pi, approximated: " + approx + "\n");
     }
 }
+
