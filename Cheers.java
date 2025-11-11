@@ -6,7 +6,7 @@ public class Cheers {
                word = word.toUpperCase();
 
                for (int i = 0; i<(word.length()); i++) {
-                if("AEFHILMNOR".indexOf(word.charAt(i))!= -1){
+                if("AEFHILMNORSX".indexOf(word.charAt(i))!= -1){
                         System.out.println("Give me an " + word.charAt(i) + ": " + word.charAt(i) + "!");
                 } else {
                         System.out.println("Give me a " + word.charAt(i) + ": " + word.charAt(i) + "!");
