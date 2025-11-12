@@ -5,13 +5,12 @@ public class CalcPi {
         double sum = 0.0;
         for (int k = 0; k < n; k++) {
             double term = 1.0 / (2 * k + 1);
-            if ((k & 1) == 0) sum += term;   // + - + - ...
-            else              sum -= term;
+            if ((k & 1) == 0) sum += term; else sum -= term;
         }
         double approx = 4.0 * sum;
 
-        // הדפסה עם LF בלבד וללא רווחים מיותרים
+        // LF בלבד, ולפני המספר המוקרב 5 רווחים בדיוק
         System.out.print("pi according to Java: " + Math.PI + "\n");
-        System.out.print("pi, approximated: " + approx + "\n");
+        System.out.print("pi, approximated:     " + approx + "\n"); // <-- חמישה רווחים
     }
 }
