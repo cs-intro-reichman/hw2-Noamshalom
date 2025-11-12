@@ -5,14 +5,13 @@ public class CalcPi {
         double sum = 0.0;
         for (int k = 0; k < n; k++) {
             double term = 1.0 / (2 * k + 1);
-            if ((k & 1) == 1) sum -= term;   // שלילי באיברים הזוגיים-לוגית (1,3,5..)
-            else               sum += term;   // חיובי באיברים האי-זוגיים
+            if ((k & 1) == 0) sum += term;   // + - + - ...
+            else              sum -= term;
         }
         double approx = 4.0 * sum;
 
-       
+        // הדפסה עם LF בלבד וללא רווחים מיותרים
         System.out.print("pi according to Java: " + Math.PI + "\n");
         System.out.print("pi, approximated: " + approx + "\n");
     }
 }
-
