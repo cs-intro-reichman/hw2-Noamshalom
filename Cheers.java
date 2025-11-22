@@ -1,3 +1,9 @@
+/*
+Feedback: 
+Great namings and code organization
+You haven't learned functions at this point, and not what 'private' means.
+*/
+
 // Prints a crowd cheering output.
 public class Cheers {
     public static void main(String[] args) {
@@ -23,3 +29,4 @@ public class Cheers {
         return "AEFHILMNORSX".indexOf(c) >= 0;
     }
 }
+
