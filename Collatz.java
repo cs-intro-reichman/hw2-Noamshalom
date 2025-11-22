@@ -1,3 +1,8 @@
+/*
+Feedback: 
+Nicely written :)
+*/
+
 public class Collatz {
     public static void main(String[] args) {
         int N = Integer.parseInt(args[0]);
@@ -29,3 +34,4 @@ public class Collatz {
         }
     }
 }
+
